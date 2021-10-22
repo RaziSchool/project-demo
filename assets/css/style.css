@@ -1,0 +1,11 @@
+
+.divOne,
+.divTwo,
+.show {
+    border-style: double;
+}
+
+.hide {
+    display: none;
+}
+

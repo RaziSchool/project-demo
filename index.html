@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="divOne">
+        <h1>Submit your Name!</h1>
+        <h3>Sample</h3>
+        <textarea>Something</textarea>
+        <button id="btnOne">Continue</button>
+    </div>
+    <div class="divTwo hide">
+        <h1>Contact Me!</h1>
+        <input type="text">
+        <button id="btnTwo">Next</button>
+    </div>
+    <div class="divThree hide">
+        <h1>Contact Me!</h1>
+        <input type="text">
+        <button id="btnTwo">Next</button>
+    </div>
+
+
+    <script>
+
+        // Declaring Variables
+
+       var btnOne = document.getElementById("btnOne");
+
+       var btnTwo = document.getElementById("btnTwo");
+
+       var divOne = document.querySelector(".divOne");
+
+       var divTwo = document.querySelector(".divTwo");
+
+    //    Functions
+
+       function startApp() {
+           divOne.setAttribute("class", "hide");
+           divTwo.setAttribute("class", "show");
+       }
+
+       function contApp() {
+           divTwo.setAttribute("class", "hide");
+           divOne.setAttribute("class", "show");
+       }
+
+    //    Event Listeners
+       btnOne.addEventListener("click", startApp);
+       btnTwo.addEventListener("click", contApp);
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>
