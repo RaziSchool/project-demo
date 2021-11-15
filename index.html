@@ -9,55 +9,81 @@
 </head>
 <body>
     <div class="divOne">
-        <h1>Submit your Name!</h1>
+        <h1>Submit your Name! Pt 1</h1>
         <h3>Sample</h3>
         <textarea>Something</textarea>
         <button id="btnOne">Continue</button>
+        <img src="https://m.media-amazon.com/images/I/71tdJLduL9L._AC_SX466_.jpg" alt="">
     </div>
     <div class="divTwo hide">
-        <h1>Contact Me!</h1>
+        <h1>Contact Me! Pt 2</h1>
         <input type="text">
         <button id="btnTwo">Next</button>
     </div>
     <div class="divThree hide">
-        <h1>Contact Me!</h1>
+        <h1>About Me! Pt 3</h1>
         <input type="text">
-        <button id="btnTwo">Next</button>
+        <button id="btnThree">Next</button>
+    </div>
+    <div class="divFour hide">
+        <h1>This is the End of the App! Pt 4</h1>
+        <button class="btnFour">Restart App</button>
     </div>
 
 
     <script>
 
-        // Declaring Variables
+        // Declaring Variables.
 
-       var btnOne = document.getElementById("btnOne");
+        var divOne = document.querySelector(".divOne");
+        var divTwo = document.querySelector(".divTwo");
+        var divThree = document.querySelector(".divThree");
+        var divFour = document.querySelector(".divFour");
 
-       var btnTwo = document.getElementById("btnTwo");
+        var btnOne = document.querySelector("#btnOne");
+        var btnTwo = document.querySelector("#btnTwo");
+        var btnThree = document.querySelector("#btnThree");
 
-       var divOne = document.querySelector(".divOne");
+        var btnFour = document.querySelector(".btnFour");
+       
 
-       var divTwo = document.querySelector(".divTwo");
+        // Create Function
 
-    //    Functions
+        function ptOne() {
+            divOne.setAttribute("class", "hide");
+            divTwo.setAttribute("class", "show");
+            divTwo.setAttribute("class", "green");
 
-       function startApp() {
-           divOne.setAttribute("class", "hide");
-           divTwo.setAttribute("class", "show");
-       }
+        }
 
-       function contApp() {
-           divTwo.setAttribute("class", "hide");
-           divOne.setAttribute("class", "show");
-       }
+        function ptTwo() {
+            divTwo.setAttribute("class", "hide");
+            divThree.setAttribute("class", "show");
+        }
 
-    //    Event Listeners
-       btnOne.addEventListener("click", startApp);
-       btnTwo.addEventListener("click", contApp);
+        function ptThree() {
+            divThree.setAttribute("class", "hide");
+            divFour.setAttribute("class", "show");
+        }
 
+        function Restart() {
+            divFour.setAttribute("class", "hide");
+            divOne.setAttribute("class", "show");
+        }
 
+        // Event Listeners
 
+        btnOne.addEventListener("click", ptOne);
+        btnTwo.addEventListener("click", ptTwo);
+        btnThree.addEventListener("click", ptThree);
+
+        
+        btnFour.addEventListener("click", Restart);
+
+          
 
 
     </script>
+    
 </body>
 </html>

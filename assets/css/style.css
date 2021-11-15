@@ -9,3 +9,19 @@
     display: none;
 }
 
+
+#btnOne {
+    color: purple;
+}
+
+
+#btnOne:hover {
+    color: red;
+    padding: 5%;
+    background-color: blue;
+}
+
+
+.green {
+    color: green;
+}
